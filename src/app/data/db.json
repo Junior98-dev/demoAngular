@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "computer",
+      "price": "1500",
+      "checked": true
+    },
+    {
+      "id": "2",
+      "name": "Phone",
+      "price": "920.99",
+      "checked": true
+    },
+    {
+      "id": "3",
+      "name": "Iphone 15",
+      "price": 999.99,
+      "checked": true
+    },
+    {
+      "id": "3c39",
+      "name": "phone",
+      "price": 20,
+      "checked": true
+    }
+  ]
+}

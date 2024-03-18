@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card-body ms-3 mt-5">
+                {{keyword}}
+                <input type="text" [(ngModel)]="keyword"> &nbsp;
+                <button (click)="searchProducts()" class="btn btn-outline-success">
+                    <i class='bx bx-search'></i>
+                </button>
+            </div>
+            <table class="table ms-3 mt-3">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td>
+                            <button [class]="product.checked?'btn btn-outline-success':'btn btn-outline-warning'" (click)="changeCheck(product)">
+                                <i [class]="product.checked?'bx bx-check':'bx bx-x'"></i>
+                            </button>
+                            
+                        </td>
+                        <td>
+                            <span class="btn btn-outline-primary">
+                                <i class='bx bxs-edit'></i> 
+                            </span>&nbsp;| 
+                            <button class="btn btn-outline-danger" (click)="delete(product)">
+                                <i class='bx bxs-trash'></i>
+                            </button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
